@@ -13,6 +13,7 @@ function getBooks(){
     })
     .then((response)=>{
         console.log(response);
+        renderBooks(response)
     })
     .catch((err)=>{
         console.log(err);
@@ -33,4 +34,16 @@ function postBooks(){
         console.log(err);
         alert(`We don't want your crummy book.`);
     });
+}
+
+function renderBooks(response){
+    const listOfBooks = response;
+      $('#bookTableBody').empty();
+      for (let book of listOfBooks) {
+        $('#bookTableBody').append(`<tr>
+                                            <td>${book.title}</td>
+                                            <td>${book.author}</td>
+                                            <td>${book.published}</td>
+                                          </tr>`);
+      };
 }
