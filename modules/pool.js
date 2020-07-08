@@ -17,3 +17,5 @@ pool.on('connect', () => {
 pool.on('error', (error) => {
   console.log('NOPE! Pool not connected');
 });
+
+module.exports = pool;
