@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const PORT = 5000;
 const app = express();
-const booksRouter = require('./routers/books.router.js');
+const booksRouter = require('./routers/books.router');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

@@ -2,7 +2,7 @@ const pg = require('pg');
 
 const Pool = pg.Pool;
 
-const pool = newPool({
+const pool = new Pool({
   database: 'bookstore',
   host: 'localhost',
   port: 5432,
