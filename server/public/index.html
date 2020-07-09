@@ -7,52 +7,64 @@
     <title>SQL Bookstore</title>
     <script src="vendors/jquery.min.js"></script>
     <script src="scripts/client.js"></script>
+    <link rel="stylesheet" href="vendors/bootstrap.js">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-    <div>
-        <input type="text" class="js-book-title js-input" placeholder="Book Title">
-        <input type="text" class="js-book-author js-input" placeholder="Name of Author">
-        <input type="text" class="js-published js-input" placeholder="Date Published">
-        <button class="js-btn-add-book">Add Book</button>
-    </div>
-    <div>
+    <div class="headline jumbotron">
+        <h1 class='header welcome'>Welcome to The Bookstore!</h1>
+        <div class='book-inputs inputs'>
+            <input type="text" class="js-book-title js-input" placeholder="Book Title">
+            <input type="text" class="js-book-author js-input" placeholder="Name of Author">
+            <input type="text" class="js-published js-input" placeholder="Date Published">
+            <button class="js-btn-add-book btn btn-secondary">Add Book</button>
+        </div>
+        <div class='magazine-inputs inputs'>
 
-        <input type="text" class="js-magazine-title js-input" placeholder="Magazine Title">
-        <input type="text" class="js-magazine-issue js-input" placeholder="Issue Number">
-        <input type="text" class="js-pages js-input" placeholder="Number of Pages">
-        <button class="js-btn-add-magazine">Add Magazine</button>
+            <input type="text" class="js-magazine-title js-input" placeholder="Magazine Title">
+            <input type="text" class="js-magazine-issue js-input" placeholder="Issue Number">
+            <input type="text" class="js-pages js-input" placeholder="Number of Pages">
+            <button class="js-btn-add-magazine btn btn-light">Add Magazine</button>
+        </div>
+        <div class='bottombaby'>
+            <h4>I just want some space
+            </h4>
+        </div>
     </div>
 
-    <h2>On the Shelf</h2>
+    <h2 class='header'>On the Shelf</h2>
     <!-- Form for books goes here -->
-    <h3>Books:</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Date Published</th>
-            </tr>
-        </thead>
-        <tbody id="bookTableBody">
-            <!-- Append books here -->
-        </tbody>
-    </table>
-    <h3>Magazines:</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Issue Number</th>
-                <th>Number of Pages</th>
-            </tr>
-        </thead>
-        <tbody id="magazineTableBody">
-            <!-- Append books here -->
-        </tbody>
-    </table>
+    <h3 class='header'>Books:</h3>
+    <div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Date Published</th>
+                </tr>
+            </thead>
+            <tbody id="bookTableBody">
+                <!-- Append books here -->
+            </tbody>
+        </table>
+    </div>
+    <h3 class='header'>Magazines:</h3>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Issue Number</th>
+                    <th>Number of Pages</th>
+                </tr>
+            </thead>
+            <tbody id="magazineTableBody">
+                <!-- Append books here -->
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>

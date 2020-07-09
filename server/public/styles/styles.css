@@ -1,0 +1,43 @@
+body {
+  background-color: #8c4130b7;
+  margin: 0px;
+}
+.header {
+  text-align: center;
+}
+
+.welcome {
+  margin-top: 0px;
+  color: #ffffff;
+  font-size: 50px;
+}
+
+.magazine-inputs {
+  margin-bottom: 50px;
+}
+
+.bottombaby {
+  margin: 21px;
+  color: #ffffff00;
+}
+
+div.inputs {
+  text-align: center;
+  align-content: center;
+  margin-bottom: 50px;
+}
+
+magazine.inputs {
+  margin: auto;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jumbotron {
+  background-image: url(https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1082&q=80);
+  margin-left: 0px;
+  margin-right: 0px;
+}
