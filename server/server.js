@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use('/api/books', booksRouter);
-app.use('api/magazines', magazinesRouter);
+app.use('/api/magazines', magazinesRouter);
 
 app.use(express.static('server/public'));
 
