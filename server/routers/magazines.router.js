@@ -5,14 +5,10 @@ const moment = require('moment');
 const { each } = require('jquery');
 
 router.get('/', (req, res) => {
-  const queryText = `SELECT * FROM "books" ORDER BY "author" ASC;`;
+  const queryText = `SELECT * FROM "magazines" ORDER BY "issue_number" ASC;`;
   pool
     .query(queryText)
     .then((dbResponse) => {
-      const rows = dbResponse.rows;
-      for (let each of rows) {
-        each.published = moment(each.published).format('MMM Do YYYY');
-      }
       console.log(dbResponse);
       res.send(dbResponse.rows);
     })
@@ -22,10 +18,10 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  const queryText = `INSERT INTO "books"("title", "author", "published")
+  const queryText = `INSERT INTO "magazines"("title", "issue_number", "pages")
     VALUES($1, $2, $3);`;
   pool
-    .query(queryText, [req.body.title, req.body.author, req.body.published])
+    .query(queryText, [req.body.title, req.body.issue_number, req.body.pages])
     .then((dbResponse) => {
       res.sendStatus(201);
     })

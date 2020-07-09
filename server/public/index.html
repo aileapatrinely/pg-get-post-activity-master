@@ -5,18 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SQL Bookstore</title>
-    <script src="vendors/jquery.js"></script>
+    <script src="vendors/jquery.min.js"></script>
     <script src="scripts/client.js"></script>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-    <h2>Books on the Shelf</h2>
+    <div>
+        <input type="text" class="js-book-title js-input" placeholder="Book Title">
+        <input type="text" class="js-book-author js-input" placeholder="Name of Author">
+        <input type="text" class="js-published js-input" placeholder="Date Published">
+        <button class="js-btn-add-book">Add Book</button>
+    </div>
+    <div>
+
+        <input type="text" class="js-magazine-title js-input" placeholder="Magazine Title">
+        <input type="text" class="js-magazine-issue js-input" placeholder="Issue Number">
+        <input type="text" class="js-pages js-input" placeholder="Number of Pages">
+        <button class="js-btn-add-magazine">Add Magazine</button>
+    </div>
+
+    <h2>On the Shelf</h2>
     <!-- Form for books goes here -->
-    <input type="text" class="js-book-title" placeholder="Book Title">
-    <input type="text" class="js-book-author" placeholder="Name of Author">
-    <input type="text" class="js-published" placeholder="Date Published">
-    <button class="js-btn-add-book">Add Book</button>
 
     <table>
         <thead>
@@ -24,10 +34,21 @@
                 <th>Title</th>
                 <th>Author</th>
                 <th>Date Published</th>
-                <th></th>
             </tr>
         </thead>
         <tbody id="bookTableBody">
+            <!-- Append books here -->
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Issue Number</th>
+                <th>Number of Pages</th>
+            </tr>
+        </thead>
+        <tbody id="magazineTableBody">
             <!-- Append books here -->
         </tbody>
     </table>
